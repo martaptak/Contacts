@@ -41,7 +41,7 @@ public class Main {
 				System.out.println();
 				break;
 			case "count":
-				contacts.getNumberOfContacts();
+				contacts.printNumberOfContacts();
 				System.out.println();
 				break;
 			case "list":

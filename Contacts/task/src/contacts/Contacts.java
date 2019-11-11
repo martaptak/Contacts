@@ -22,7 +22,7 @@ class Contacts {
 		System.out.println("This record removed!");
 	}
 
-	void getNumberOfContacts() {
+	void printNumberOfContacts() {
 
 		System.out.println("The Phone Book has " + contactList.size() + " records.");
 	}
@@ -32,7 +32,7 @@ class Contacts {
 		ContactFactory.editContact(contact);
 
 		contact.setTimeModified(LocalDateTime.now());
-		}
+	}
 
 	void printContacts() {
 

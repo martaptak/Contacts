@@ -101,7 +101,11 @@ class Person extends Contact implements Serializable {
 
 	private void setGender(String gender) {
 
-		if (gender.equals("M") || gender.equals("F")) {
+		if (gender == null) {
+			return;
+		}
+
+		if (gender.equals("M") || gender.equals("F")) { 
 			this.gender = gender;
 		} else {
 			System.out.println("Bad gender!");
@@ -122,7 +126,7 @@ class Person extends Contact implements Serializable {
 	}
 
 	@Override
-	public void changeFieldsValue(String field, String newValue) {
+	public void changeFieldValue(String field, String newValue) {
 
 		switch (field) {
 			case "name":

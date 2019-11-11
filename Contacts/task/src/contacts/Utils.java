@@ -4,7 +4,7 @@ public interface Utils {
 
 	String getAllPossibleFields();
 
-	void changeFieldsValue(String field, String newValue);
+	void changeFieldValue(String field, String newValue);
 
 	String getFieldValue(String field);
 

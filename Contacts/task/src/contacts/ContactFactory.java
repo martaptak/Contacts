@@ -2,45 +2,45 @@ package contacts;
 
 class ContactFactory {
 
- private static  Contact createContact(String type){
-	     switch (type.toLowerCase()){
-		     case "person":
-		     	    return createPerson();
+	private static Contact createContact(String type) {
+		switch (type.toLowerCase()) {
+			case "person":
+				return createPerson();
 
-		     case "organization":
-		     	return createOrganization();
-		     default:
-			     return null;
-	     }
-}
+			case "organization":
+				return createOrganization();
+			default:
+				return null;
+		}
+	}
 
-private static Person createPerson(){
-	System.out.println("Enter the name: ");
-	String name = Main.scanner.nextLine();
-	System.out.println("Enter the surname: ");
-	String surname = Main.scanner.nextLine();
-	System.out.println("Enter the birth date:");
-	String birthDay = Main.scanner.nextLine();
-	System.out.println("Enter the gender (M, F):");
-	String gender = Main.scanner.nextLine();
-	System.out.println("Enter the number:");
-	String phoneNumber = Main.scanner.nextLine();
-	return new Person(phoneNumber, name, surname, birthDay, gender);
+	private static Person createPerson() {
+		System.out.println("Enter the name: ");
+		String name = Main.scanner.nextLine();
+		System.out.println("Enter the surname: ");
+		String surname = Main.scanner.nextLine();
+		System.out.println("Enter the birth date:");
+		String birthDay = Main.scanner.nextLine();
+		System.out.println("Enter the gender (M, F):");
+		String gender = Main.scanner.nextLine();
+		System.out.println("Enter the number:");
+		String phoneNumber = Main.scanner.nextLine();
+		return new Person(phoneNumber, name, surname, birthDay, gender);
 
-}
+	}
 
-private static Organization createOrganization(){
-	System.out.println("Enter the organization name:");
-	String name = Main.scanner.nextLine();
-	System.out.println("Enter the address:");
-	String address = Main.scanner.nextLine();
-	System.out.println("Enter the number:");
-	String phoneNumber = Main.scanner.nextLine();
+	private static Organization createOrganization() {
+		System.out.println("Enter the organization name:");
+		String name = Main.scanner.nextLine();
+		System.out.println("Enter the address:");
+		String address = Main.scanner.nextLine();
+		System.out.println("Enter the number:");
+		String phoneNumber = Main.scanner.nextLine();
 
-	return new Organization(phoneNumber, name, address);
-}
+		return new Organization(phoneNumber, name, address);
+	}
 
-	static Contact addContact(String type){
+	static Contact addContact(String type) {
 
 		Contact contact = createContact(type);
 
@@ -57,7 +57,7 @@ private static Organization createOrganization(){
 		String field = Main.scanner.nextLine();
 		System.out.println(String.format("Enter %s: ", field));
 		String newValue = Main.scanner.nextLine();
-		contact.changeFieldsValue(field, newValue);
+		contact.changeFieldValue(field, newValue);
 		System.out.println("Saved");
 
 	}

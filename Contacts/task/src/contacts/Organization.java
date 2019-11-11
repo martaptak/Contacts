@@ -75,7 +75,7 @@ public class Organization extends Contact implements Serializable {
 	}
 
 	@Override
-	public void changeFieldsValue(String field, String newValue) {
+	public void changeFieldValue(String field, String newValue) {
 
 		switch (field) {
 			case "name":
